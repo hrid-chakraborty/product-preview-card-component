@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    /* Primary colors */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* Neutral colors */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    font-size: calc(14px+1vh);
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+}
+
+h1, p {
+    all: unset;
+    display: block;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 0 2rem;
+    border-radius: 10px;
+}
+
+.main-image {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.header-tag {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem
+}
+
+h1 {
+    font-family: "Fraunces";
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--very-dark-blue);
+}
+
+main p {
+    line-height: 1.4rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+}
+
+.discountedPrice {
+    color: var(--dark-cyan);
+    font-family: "Fraunces";
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: none;
+    background-color: var(--dark-cyan);
+    color: white;
+    gap: 0.3rem;
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+    .main-container {
+        flex-direction: row;
+        margin: 10rem;
+        width: 50%;
+    }
+    .main-image {
+        content: url("images/image-product-desktop.jpg");
+        border-radius: 10px 0 0 10px;
+        width: 50%;
+        flex: 1;
+    }
+    .text-container {
+        flex: 1;
+        padding: 2rem;
+        justify-content: center;
+    }
+
+}
